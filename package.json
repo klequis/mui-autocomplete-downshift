@@ -2,6 +2,18 @@
   "name": "downshift",
   "version": "0.1.0",
   "private": true,
+  "description": "combining Material UI, Downshift, Redux & a larged dataset of 41,000+ postal codes",
+  "keywords": [
+    "autocomplete",
+    "downshift",
+    "Material UI",
+    "material-ui",
+    "mui",
+    "react",
+    "redux"
+  ],
+  "main": "src/index.js",
+  "proxy": "http://localhost:3030",
   "dependencies": {
     "@material-ui/core": "^3.0.2",
     "downshift": "^2.2.2",

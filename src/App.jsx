@@ -1,13 +1,11 @@
 import React from 'react'
-import DownshiftPopper from './DownshiftPopper'
-import DownshiftSimple from './DownshiftSimple'
-import DownshiftMultiple from './DownshiftMultiple'
+import PostalCodesDownshift from './PostalCodesDownshift'
 
 const App = () => {
   return (
     <div>
 
-      <DownshiftSimple />
+      <PostalCodesDownshift />
       <p>some text to show</p>
     </div>
   )
