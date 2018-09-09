@@ -1,3 +1,3 @@
-# Material UI Autocomplete Example
+# Material UI Autocomplete with Downshift
 
-Material UI autocomplete example broken into separate components
+Material UI autocomplete, using downshift, example broken into separate components
