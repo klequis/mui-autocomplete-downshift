@@ -1,4 +1,4 @@
-import { parse } from './cookie-parser'
+// import { parse } from './cookie-parser'
 /* Dev */
 // eslint-disable-next-line
 import { pink } from 'logger'
@@ -15,18 +15,11 @@ const rejectErrors = (res) => {
 }
 
 export const fetchJson = (url, options = {}) => {
-  let token
-  const tokenObj = parse(document.cookie)
   let headers = {
     ...options.headers,
     'Accept': 'application/json',
     'Content-Type': 'application/json',
   }
-  if (tokenObj.hasOwnProperty('token')) {
-    token = `Token ${tokenObj.token}`
-    headers.authorization = token
-  }
-
   return (
     fetch(url, {
       ...options,
@@ -37,16 +30,4 @@ export const fetchJson = (url, options = {}) => {
   )
 }
 
-export const fetchUploadImage = (url, options = {}) => (
-  fetch(url, {
-    ...options,
-    headers: {
-      ...options.headers,
-      'Accept': 'application/json',
-    },
-  })
-    .then(rejectErrors)
-    .then(res => res.json())
-)
-
-export default { fetchJson, fetchUploadImage }
+export default { fetchJson }

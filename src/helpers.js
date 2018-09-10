@@ -1,14 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import deburr from 'lodash/deburr'
+// import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import MenuItem from '@material-ui/core/MenuItem'
-import { suggestions } from './suggestions'
+// import * as selectors from 'store/selectors'
+
+// eslint-disable-next-line
+import { green } from 'logger'
+
+const suggestions = []
 
 export const renderInput = (inputProps) => {
   const { InputProps, classes, ref, ...other } = inputProps
-  console.log('inputProps', inputProps)
-  console.log('ref', ref)
+  green('renderInput: inputProps', inputProps)
 
   return (
     <TextField

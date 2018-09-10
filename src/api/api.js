@@ -1,8 +1,18 @@
+import fetchPostalCodes from './fetchPostalCodes'
 
-import { green } from 'logger'
+/* Dev */
+// eslint-disable-next-line
+import { pink } from 'logger'
 
-const x = {
-  hi: 'one'
+export default {
+  postalCodes: {
+    read: async (searchString) => {
+      const a = await fetchPostalCodes(searchString)
+      pink('a', a)
+      if (a === undefined) {
+        return []
+      }
+      return a
+    }
+  },
 }
-
-export default x

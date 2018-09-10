@@ -1,39 +1,25 @@
 import React from 'react'
-import PostalCodesDownshift from './PostalCodesDownshift'
+import { withStyles } from '@material-ui/core/styles'
+import withRoot from './withRoot'
+import PostalCodes from './PostalCodes'
 
 const App = () => {
   return (
     <div>
 
-      <PostalCodesDownshift />
+      <PostalCodes />
       <p>some text to show</p>
     </div>
   )
 }
 
-// <DownshiftPopper />
-      // <DownshiftMultiple />
+// export default App
 
+// export default compose(
+//   withStyles(styles),
+//   connect(mapStateToProps, authActions)
+// )(withRoot(App))
 
+const styles = {}
 
-
-
-// function IntegrationDownshift(props) {
-//   const { classes } = props
-
-//   return (
-//     <div className={classes.root}>
-
-//       <div className={classes.divider} />
-//       <DownshiftMultiple classes={classes} />
-//       <div className={classes.divider} />
-
-//     </div>
-//   )
-// }
-
-// IntegrationDownshift.propTypes = {
-//   classes: PropTypes.object.isRequired,
-// }
-
-export default App
+export default withStyles(styles)(withRoot(App))
